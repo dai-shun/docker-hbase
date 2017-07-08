@@ -2,6 +2,8 @@ FROM daishun/jdk8
 
 MAINTAINER daishun <daishun9@gmail.com>
 
+RUN echo "127.0.0.1 localhost" >>/etc/hosts
+
 COPY hbase-1.1.1-bin.tar.gz /home/hbase-1.1.1-bin.tar.gz
 
 RUN cd home && tar -zxvf /home/hbase-1.1.1-bin.tar.gz && rm -f /home/hbase-1.1.1-bin.tar.gz && mkdir data
